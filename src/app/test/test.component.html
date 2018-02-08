@@ -1,0 +1,43 @@
+<br>
+<h1>{{  text }} </h1>
+<h2> {{"length of " + text.toUpperCase() + " is " + text.length  }}</h2>
+<br>
+<p>
+  Calling a function using interpolation <strong>{{interpolationfunc()}}</strong>
+  <br>
+  Url of the Current Window using window.location.href is <b>{{siteURL}}</b>
+
+</p>
+<br> <br>
+<h1>Property Binding</h1>
+<input type="text" [disabled] = "boolvar" value=" This is disabled">
+<input type="text" bind-disabled = "boolvar" value=" This is disabled">
+<br><br>
+<h1> Class Binding </h1>
+<h2 [class] = "redcolor"> This is the Danger Text </h2>
+<h2 [ngClass] = "messageclass" >Hey this is the example of class binding</h2>
+<br>
+<h1> Style binding </h1>
+
+<h2 [style.color] = " 'orange'"> Orange text</h2>
+<h2 [style.color] = " boolvar ? 'orange' : 'green'"> Style binding with condition</h2>
+<h2 [ngStyle] = "messagestyle" >Hey this is the example of Style binding</h2>
+
+
+<br>
+<h1> Event Binding</h1>
+
+<button (click) = onclick($event)>Binding on click Event </button>{{variable}}
+<br>
+<h2> To check the Event type : {{eventvar}}</h2>
+<br>
+<h1> Template Reference Variable </h1>
+<input type = "text" #myinput>
+<button (click) = fun(myinput.value)> click  to get the text</button>
+<b>{{valueref}} </b>
+<br>
+
+<h1> Two Way Binding </h1>
+
+<input type = "text" [(ngModel)] = "name">
+{{name}}
